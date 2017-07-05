@@ -1,19 +1,17 @@
 {
-    "name": "parameter",
-    "description": "Validade parameter type",
-    "readmeFilename": "README.md",
+    "name": "hnparameter",
     "version": "1.0.0",
-    "author": "Helio Nogueira <helio.nogueir@gmail.com>",
-    "license": "MIT",
-    "repository": "helionogueir/parameter",
-    "homepage": "https://github.com/helionogueir/",
+    "description": "Validade parameter type",
+    "main": "index.js",
+    "scrips": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
     "keywords": [
         "validate",
         "parameter",
         "variable",
         "type"
     ],
-    "engines": {
-        "node": ">= 0.10.0"
-    }
+    "author": "Helio Nogueira <helio.nogueir@gmail.com> (https://github.com/helionogueir)",
+    "license": "MIT"
 }
