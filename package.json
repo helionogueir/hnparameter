@@ -1,0 +1,19 @@
+{
+    "name": "parameter",
+    "description": "Validade parameter type",
+    "readmeFilename": "README.md",
+    "version": "1.0.0",
+    "author": "Helio Nogueira <helio.nogueir@gmail.com>",
+    "license": "MIT",
+    "repository": "helionogueir/parameter",
+    "homepage": "https://github.com/helionogueir/",
+    "keywords": [
+        "validate",
+        "parameter",
+        "variable",
+        "type"
+    ],
+    "engines": {
+        "node": ">= 0.10.0"
+    }
+}
