@@ -4,5 +4,5 @@
  * MIT Licensed
  */
 module.exports = {
-    require: require(require('path').resolve("./core/Require"))
+    require: require("./core/Require")
 };

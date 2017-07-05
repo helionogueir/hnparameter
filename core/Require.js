@@ -1,8 +1,8 @@
 var use = new Object({
-    Bool: require(require('path').resolve("./core/type/Bool")),
-    String: require(require('path').resolve("./core/type/String")),
-    Integer: require(require('path').resolve("./core/type/Integer")),
-    Datetime: require(require('path').resolve("./core/type/Datetime"))
+    Bool: require("./type/Bool"),
+    String: require("./type/String"),
+    Integer: require("./type/Integer"),
+    Datetime: require("./type/Datetime")
 });
 
 /**
