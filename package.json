@@ -1,6 +1,6 @@
 {
   "name": "hnparameter",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Validade parameter type",
   "main": "index.js",
   "scripts": {

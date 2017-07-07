@@ -1,7 +1,7 @@
 /**
  * - Require variables
  * @author Helio Nogueira <helio.nogueir@gmail.com>
- * @version 0.0.3
+ * @version 0.0.4
  */
 var Require = new function () {
 
@@ -16,10 +16,10 @@ var Require = new function () {
      * - Validate variables
      * @param Object keys
      * @param Object data
-     * @param Array log
+     * @param Function callback
      * @return bool
      */
-    this.validate = function (keys, data, log) {
+    this.validate = function (keys, data, callback) {
         var valid = true;
         var variable = "None";
         var type = "None";
@@ -31,7 +31,7 @@ var Require = new function () {
                     valid = false;
                 } else if (((keys[namespace] instanceof Object) || (keys[namespace] instanceof Array))
                     && ((data[namespace] instanceof Object) || (data[namespace] instanceof Array))) {
-                    valid = this.validate(keys[namespace], data[namespace], log);
+                    valid = this.validate(keys[namespace], data[namespace], callback);
                 } else {
                     switch (keys[namespace]) {
                         case "bool":
@@ -60,12 +60,12 @@ var Require = new function () {
             }
         }
         if (!valid) {
-            if (log instanceof Array) {
+            if (log instanceof Function) {
                 var message = "Variable \"" + variable + " (" + type + ")\" is invalid";
                 if (keys instanceof Object) {
                     message += " (Keys: " + JSON.stringify(keys) + ")";
                 }
-                log[log.length] = new Error(message);
+                log(new Error(message));
             }
         }
         return valid;
