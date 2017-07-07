@@ -1,14 +1,14 @@
-var use = new Object({
-    fs: require("fs"),
-    Require: require("./Require")
-});
-
 /**
  * - File require variables
- * @author Helio Nogueira <helio.nogueira@kroton.com.br>
- * @version 1.0.0
+ * @author Helio Nogueira <helio.nogueir@gmail.com>
+ * @version 0.0.3
  */
 var File = new function () {
+
+    var use = new Object({
+        fs: require("fs"),
+        Require: require("./Require")
+    });
 
     /**
      * - Validate variables

@@ -1,7 +1,7 @@
 /**
  * - Require datatime variable
- * @author Helio Nogueira <helio.nogueira@kroton.com.br>
- * @version 1.0.0
+ * @author Helio Nogueira <helio.nogueir@gmail.com>
+ * @version 0.0.3
  */
 var Datatime = new function () {
 

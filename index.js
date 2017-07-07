@@ -5,5 +5,6 @@
  */
 module.exports = {
     require: require("./core/Require"),
-    file: require("./core/File")
+    file: require("./core/File"),
+    error: require("./core/Error")
 };

@@ -1,16 +1,16 @@
-var use = new Object({
-    Bool: require("./type/Bool"),
-    String: require("./type/String"),
-    Integer: require("./type/Integer"),
-    Datetime: require("./type/Datetime")
-});
-
 /**
  * - Require variables
- * @author Helio Nogueira <helio.nogueira@kroton.com.br>
- * @version 1.0.0
+ * @author Helio Nogueira <helio.nogueir@gmail.com>
+ * @version 0.0.3
  */
 var Require = new function () {
+
+    var use = new Object({
+        Bool: require("./type/Bool"),
+        String: require("./type/String"),
+        Integer: require("./type/Integer"),
+        Datetime: require("./type/Datetime")
+    });
 
     /**
      * - Validate variables
