@@ -60,12 +60,12 @@ var Require = new function () {
             }
         }
         if (!valid) {
-            if (log instanceof Function) {
+            if (callback instanceof Function) {
                 var message = "Variable \"" + variable + " (" + type + ")\" is invalid";
                 if (keys instanceof Object) {
                     message += " (Keys: " + JSON.stringify(keys) + ")";
                 }
-                log(new Error(message));
+                callback(new Error(message));
             }
         }
         return valid;
