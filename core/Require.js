@@ -1,7 +1,7 @@
 /**
  * - Require variables
  * @author Helio Nogueira <helio.nogueir@gmail.com>
- * @version 0.0.4
+ * @version 0.0.5
  */
 var Require = new function () {
 
