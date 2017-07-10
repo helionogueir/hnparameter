@@ -1,7 +1,7 @@
 /**
  * - Require datatime variable
  * @author Helio Nogueira <helio.nogueir@gmail.com>
- * @version 0.0.3
+ * @version 0.1.0
  */
 var Datatime = new function () {
 
@@ -12,11 +12,11 @@ var Datatime = new function () {
      */
     this.validate = function (value) {
         var valid = false;
-        var partterns = new Array(
+        var patterns = new Array(
             /^(\d{4})\-(\d{2})\-(\d{2})( |\T)(\d{2})\:(\d{2})\:(\d{2})$/
         );
-        for (var i = 0, parttern; (parttern = partterns[i++]);) {
-            if ((new RegExp(parttern)).test(value)) {
+        for (var i = 0, pattern; (pattern = patterns[i++]);) {
+            if ((new RegExp(pattern)).test(value)) {
                 valid = true;
                 break;
             }

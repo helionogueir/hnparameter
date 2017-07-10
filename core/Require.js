@@ -1,7 +1,7 @@
 /**
  * - Require variables
  * @author Helio Nogueira <helio.nogueir@gmail.com>
- * @version 0.0.5
+ * @version 0.1.0
  */
 var Require = new function () {
 
@@ -51,6 +51,9 @@ var Require = new function () {
                             break;
                         case "Object":
                             valid = (!(data[namespace] instanceof Object)) ? false : valid;
+                            break;
+                        case "Function":
+                            valid = (!(data[namespace] instanceof Function)) ? false : valid;
                             break;
                         default:
                             valid = false;
