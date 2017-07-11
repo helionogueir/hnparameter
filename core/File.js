@@ -1,7 +1,7 @@
 /**
  * - File require variables
  * @author Helio Nogueira <helio.nogueir@gmail.com>
- * @version 0.0.3
+ * @version 0.1.1
  */
 var File = new function () {
 
@@ -16,27 +16,27 @@ var File = new function () {
      * @param string encode
      * @param Object keys
      * @param Object data
-     * @param Array log
+     * @param Function callback
      * @return Object
      */
-    this.json = function (filename, encode, keys, log) {
+    this.json = function (filename, encode, keys, callback) {
         var data = new Object();
         try {
             var cfg = null;
             encode = ((undefined !== encode) && ("" !== encode)) ? encode : "utf8";
             if (use.fs.existsSync(filename)) {
                 metadata = JSON.parse(use.fs.readFileSync(filename, encode));
-                if (use.Require.validate(keys, metadata, log)) {
+                if (use.Require.validate(keys, metadata, callback)) {
                     data = metadata;
                 }
             } else {
-                if (log instanceof Array) {
-                    log[log.length] = new Error("File not exists.");
+                if (callback instanceof Function) {
+                    callback(new Error("File \"" + filename + "\"not exists"));
                 }
             }
         } catch (err) {
-            if (log instanceof Array) {
-                log[log.length] = err;
+            if (callback instanceof Array) {
+                callback(err);
             }
         }
         return data;
