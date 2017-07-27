@@ -1,9 +1,9 @@
 /**
  * - Require variables
  * @author Helio Nogueira <helio.nogueir@gmail.com>
- * @version 0.1.0
+ * @version 0.1.2
  */
-var Require = new function () {
+var Require = new function() {
 
     var use = new Object({
         Bool: require("./type/Bool"),
@@ -16,10 +16,9 @@ var Require = new function () {
      * - Validate variables
      * @param Object keys
      * @param Object data
-     * @param Function callback
      * @return bool
      */
-    this.validate = function (keys, data, callback) {
+    this.validate = function(keys, data) {
         var valid = true;
         var variable = "None";
         var type = "None";
@@ -29,9 +28,9 @@ var Require = new function () {
                 type = keys[namespace];
                 if ((null === data) || ("" === data) || (undefined === data) || (null === data[namespace]) || ("" === data[namespace]) || (undefined === data[namespace])) {
                     valid = false;
-                } else if (((keys[namespace] instanceof Object) || (keys[namespace] instanceof Array))
-                    && ((data[namespace] instanceof Object) || (data[namespace] instanceof Array))) {
-                    valid = this.validate(keys[namespace], data[namespace], callback);
+                } else if (((keys[namespace] instanceof Object) || (keys[namespace] instanceof Array)) &&
+                    ((data[namespace] instanceof Object) || (data[namespace] instanceof Array))) {
+                    valid = this.validate(keys[namespace], data[namespace]);
                 } else {
                     switch (keys[namespace]) {
                         case "bool":
@@ -60,15 +59,6 @@ var Require = new function () {
                             break;
                     }
                 }
-            }
-        }
-        if (!valid) {
-            if (callback instanceof Function) {
-                var message = "Variable \"" + variable + " (" + type + ")\" is invalid";
-                if (keys instanceof Object) {
-                    message += " (Keys: " + JSON.stringify(keys) + ")";
-                }
-                callback(new Error(message));
             }
         }
         return valid;

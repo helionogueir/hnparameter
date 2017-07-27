@@ -1,25 +1,25 @@
 {
-  "name": "hnparameter",
-  "version": "0.1.1",
-  "description": "Validade parameter type",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/helionogueir/hnparameter.git"
-  },
-  "keywords": [
-    "parameter",
-    "type",
-    "validate",
-    "file"
-  ],
-  "author": "Helio Nogueira <helio.nogueir@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/helionogueir/hnparameter/issues"
-  },
-  "homepage": "https://github.com/helionogueir/hnparameter#readme"
+    "name": "hnparameter",
+    "version": "0.1.2",
+    "description": "Validade parameter type",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/helionogueir/hnparameter.git"
+    },
+    "keywords": [
+        "parameter",
+        "type",
+        "validate",
+        "file"
+    ],
+    "author": "Helio Nogueira <helio.nogueir@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/helionogueir/hnparameter/issues"
+    },
+    "homepage": "https://github.com/helionogueir/hnparameter#readme"
 }
